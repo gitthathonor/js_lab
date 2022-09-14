@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // JSON -> {"key" : value}
+
+        let user = {
+            name:"홍길동",
+            age:10,
+            hobby:["축구","농구"] //DB에 옮기려고 한다면 테이블이 하나 더 나와야 한다.
+        };
+
+        let jsonUser = '{ "name":"홍길동", "age":10, "hobby":["축구","농구"] }'; //통신을 할 때, byte 스트림에 집어넣기 위해서 사용한다.
+
+        console.log(user);
+        console.log(jsonUser);
+
+        console.log(user.age);
+        console.log(user.hobby[0]);
+
+        // json -> js object
+        console.log("========================");
+        let jsObject = JSON.parse(jsonUser);
+        console.log(jsObject);
+
+        // js object -> json string
+        let jsonString = JSON.stringify(jsObject);
+        console.log(jsonString);
+    </script>
+</body>
+</html>

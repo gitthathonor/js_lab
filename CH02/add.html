@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            padding: 20px;
+            border: 1px solid black;
+            height: 300px;
+        }
+        .item {
+            border: 1px dotted blue;
+            height: 30px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="box">
+        <div class="item">
+            1
+        </div>
+    </div>
+    <script>
+        function getItem(id) {
+            return `<div class="item">${id}</div>`;
+        }
+
+        $(".box").prepend(getItem(2));
+        $(".box").prepend(getItem(3));
+        $(".box").append(getItem(4));
+        $(".box").before(getItem(5));
+        $(".box").after(getItem(6));
+    </script>
+</body>
+</html>

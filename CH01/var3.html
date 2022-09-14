@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let list = [1,2,3,4];
+        //console.log(list);
+        //console.log(list[0]);
+        
+        // 추가
+        list.push(5);
+        let list2 = list.concat(6); // 불변 : 기존 데이터를 건드리지 않는 것
+
+        // for문
+        list.forEach((i)=>{
+            console.log("list",i);
+        });
+
+        list2.forEach((i)=>{
+            console.log("list2",i);
+        });
+
+        // spread연산자 : 타입이 없는 원시데이터로 옮긴다.
+        let list3 = [0,...list2,7];
+
+        list3.forEach((i)=>{
+            console.log("list2",i);
+        });
+       
+    </script>
+</body>
+</html>
